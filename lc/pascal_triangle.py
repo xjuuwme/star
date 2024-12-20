@@ -1,3 +1,5 @@
+""" coding """
+
 
 class PascalTriangle:
     """ Yang Triangle """
