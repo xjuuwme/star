@@ -74,4 +74,7 @@ headb = solution.build_from([6, 6])
 # headb = solution.build_from([1, 2])
 print_ll(headb)
 print_ll(solution.removeElements(headb, 6))
-            
+val = 61
+print(val//2)
+print(val/2)
+print(val >> 1)
