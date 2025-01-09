@@ -1,3 +1,6 @@
+import pydantic
+
+
 def matrixReshape(nums, r, c):
     flat = sum(nums, [])
     if len(flat) != r * c:
