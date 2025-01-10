@@ -1,5 +1,5 @@
 def spiralOrder(matrix):
-    return matrix and [*matrix.pop(0)] + spiralOrder([list(zip(*matrix))[::-1]])
+    return matrix and [*matrix.pop(0)] + spiralOrder([*zip(*matrix)][::-1])
 
 
 def print_ma(matrix):
@@ -18,8 +18,15 @@ for item in x:
 print("==========================")
 
 ma = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-print_ma([item[::-1] for item in ma])
+bb = [*ma.pop(0)]
+cc = [ma.pop()]
+print_ma(bb)
+print_ma(cc)
+
 zipped = [list(zip(*ma))[::-1]]
 print_ma(zipped)
 print_ma(zipped[::-1])
-# print_ma(spiralOrder(ma))
+
+print("Result ==========================")
+matt = [[1, 2, 3], [8, 9, 4], [7, 6, 5]]
+print_ma(spiralOrder(matt))
